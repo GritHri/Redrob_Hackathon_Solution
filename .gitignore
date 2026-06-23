@@ -1,2 +1,5 @@
 .DS_Store
 data/candidates.jsonl
+__pycache__/
+*.pyc
+.venv/
