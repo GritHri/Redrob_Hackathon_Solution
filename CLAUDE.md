@@ -112,6 +112,16 @@ Pre-computation (embeddings, indexes, model weights) can exceed 5 min — only t
 3. GitHub repo with: source code, `requirements.txt`, `submission_metadata.yaml`, reproduce command in README, pre-computed artifacts or script to generate them
 4. Sandbox link (HuggingFace Spaces, Streamlit Cloud, Colab, etc.) — must rank ≤100 candidates end-to-end on CPU
 
+## Source of Truth Hierarchy
+
+**When any conflict exists between docs, use this order:**
+
+1. `docs/hackathon_context/` — **authoritative**. These are the actual hackathon-issued files (JD, submission spec, signals doc, README). Rules, constraints, and JD criteria come only from here.
+2. `docs/analyzed_data/` — **authoritative for dataset facts**. Title distribution, company distribution, and counts come from actual scans of `candidates.jsonl`.
+3. `docs/HACKATHON_DECODED.md`, `docs/ranking_strategy.md`, `docs/hard_filters.md` — **interpretation and design docs, not source of truth**. These are working analysis documents — open to revision. Do not treat claims in these files as settled facts. Verify any claim against source 1 or 2 before acting on it.
+
+Scoring weights, behavioral multiplier ranges, and model choices in the interpretation docs are **design decisions**, not sourced from hackathon rules.
+
 ## Architecture Guidance
 
 Given the 5-min CPU constraint on 100K candidates:
