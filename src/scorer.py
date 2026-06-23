@@ -326,7 +326,7 @@ def score(record: dict, semantic: float) -> float:
         semantic: cosine similarity of career embedding vs JD embedding [0, 1]
 
     Returns:
-        float in [0, ~1.2]
+        float in [0.0, 1.0]
     """
     sem = max(0.0, min(1.0, float(semantic)))
     base = (
@@ -336,7 +336,7 @@ def score(record: dict, semantic: float) -> float:
         + company_score(record)    * 0.15
         + location_score(record)   * 0.10
     )
-    return round(max(0.0, base * behavioral_multiplier(record) * consistency_score(record)), 6)
+    return round(max(0.0, min(1.0, base * behavioral_multiplier(record) * consistency_score(record))), 6)
 
 
 def score_breakdown(record: dict, semantic: float) -> dict:
@@ -350,7 +350,7 @@ def score_breakdown(record: dict, semantic: float) -> dict:
     cons = consistency_score(record)
     base = sem * 0.35 + ts * 0.20 + ss * 0.20 + cs * 0.15 + ls * 0.10
     return {
-        "final":                round(max(0.0, base * bm * cons), 6),
+        "final":                round(max(0.0, min(1.0, base * bm * cons)), 6),
         "base":                 round(base, 4),
         "semantic":             round(sem, 4),
         "title":                round(ts, 4),

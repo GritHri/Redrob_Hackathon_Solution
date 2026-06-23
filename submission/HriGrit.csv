@@ -1,5 +1,5 @@
 candidate_id,rank,score,reasoning
-CAND_0018499,1,1.018178,"Senior Machine Learning Engineer (7yr); RAG (expert), Weaviate (expert), Learning to Rank (expert); ex-Zomato; Noida, Uttar Pradesh. Open to work; 15d notice; github score 94; strong semantic match (0.71)."
+CAND_0018499,1,1.000000,"Senior Machine Learning Engineer (7yr); RAG (expert), Weaviate (expert), Learning to Rank (expert); ex-Zomato; Noida, Uttar Pradesh. Open to work; 15d notice; github score 94; strong semantic match (0.71)."
 CAND_0081846,2,0.966601,"Lead AI Engineer (6yr); Embeddings (expert), Information Retrieval (expert), Vector Search (expert); ex-Razorpay; Jaipur, Rajasthan. Open to work; 30d notice; strong semantic match (0.74)."
 CAND_0039754,3,0.964281,"Senior Applied Scientist (16yr); OpenSearch (expert), pgvector (expert), Qdrant (expert); ex-Meta; Indore, Madhya Pradesh. Open to work; 30d notice; github score 77; strong semantic match (0.64)."
 CAND_0002025,4,0.950450,"Senior AI Engineer (5yr); FAISS (expert), TensorFlow (expert), LangChain (expert); ex-Apple; Trivandrum, Kerala. Open to work; 30d notice; github score 96; strong semantic match (0.67)."
